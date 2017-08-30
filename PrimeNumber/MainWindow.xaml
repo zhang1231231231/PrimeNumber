@@ -6,7 +6,33 @@
         xmlns:local="clr-namespace:PrimeNumber"
         mc:Ignorable="d"
         Title="MainWindow" Height="350" Width="525">
-    <Grid>
-        
+    <Grid Background="AliceBlue">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="auto"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
+        </Grid.RowDefinitions>
+        <GroupBox Margin="1" Grid.Row="0" Height="100" Content="Input:">
+        </GroupBox>
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="auto"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            <TextBlock Text="Please input a number:" Grid.Column="0" FontSize="20" Height="40" />
+            <TextBox Name="textBox1" Height="30" Width="100" Grid.Column="1" DataObject.Pasting="textBox1_Pasting" PreviewKeyDown="textBox1_PreviewKeyDown" InputMethod.IsInputMethodEnabled="False"
+                   PreviewTextInput="textBox1_PreviewTextInput"/>
+        </Grid>
+        <GroupBox Margin="1" Grid.Row="1"/>
+        <Grid Grid.Row="1">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="auto"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            <Grid Grid.Column="0">
+                <Button Name="CheckNumberButton" Height="50" Width="80" Content="Check" Click="CheckNumberButton_Click"/>
+            </Grid>
+            <GroupBox Margin="10" Grid.Column="1"  Content="Out result:"/>
+            <TextBlock Name="ResultText" Margin="20"  Grid.Column="1" FontSize="30" Height="40" Foreground="Red" TextAlignment="Center" />
+        </Grid>
     </Grid>
 </Window>
