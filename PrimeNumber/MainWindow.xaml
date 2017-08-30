@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:PrimeNumber"
         mc:Ignorable="d"
-        Title="MainWindow" Height="350" Width="525">
+        Title="MainWindow" Height="500" Width="800" MinWidth="500" MinHeight="300">
     <Grid Background="AliceBlue">
         <Grid.RowDefinitions>
             <RowDefinition Height="auto"></RowDefinition>
@@ -18,8 +18,8 @@
                 <ColumnDefinition Width="auto"/>
                 <ColumnDefinition Width="*"/>
             </Grid.ColumnDefinitions>
-            <TextBlock Text="Please input a number:" Grid.Column="0" FontSize="20" Height="40" />
-            <TextBox Name="textBox1" Height="30" Width="100" Grid.Column="1" DataObject.Pasting="textBox1_Pasting" PreviewKeyDown="textBox1_PreviewKeyDown" InputMethod.IsInputMethodEnabled="False"
+            <TextBlock Margin="10" Text="Please input a number:" Grid.Column="0" FontSize="20" Height="40" />
+            <TextBox Name="textBox1" Height="30" Width="200" Grid.Column="1" DataObject.Pasting="textBox1_Pasting" PreviewKeyDown="textBox1_PreviewKeyDown" InputMethod.IsInputMethodEnabled="False"
                    PreviewTextInput="textBox1_PreviewTextInput"/>
         </Grid>
         <GroupBox Margin="1" Grid.Row="1"/>

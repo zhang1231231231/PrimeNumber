@@ -63,7 +63,7 @@ namespace PrimeNumber
             foreach (char c in _string)
             {
                 if (!char.IsDigit(c))
-                    //if(c<'0' c="">'9')//最好的方法,在下面测试数据中再加一个0，然后这种方法效率会搞10毫秒左右
+                    //if(c<'0' c="">'9')//最好的方法,在下面测试数据中再加一个0，然后这种方法效率会高10毫秒左右
                     return false;
             }
             return true;
